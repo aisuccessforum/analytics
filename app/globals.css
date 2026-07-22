@@ -8,6 +8,7 @@
   }
   body {
     @apply bg-paper text-ink font-body antialiased;
+    font-size: clamp(1rem, 0.94rem + 0.25vw, 1.0625rem);
   }
   ::selection {
     @apply bg-brass/30 text-ink;
@@ -19,8 +20,35 @@
 }
 
 @layer components {
+  /* Fluid type scale — grows/shrinks smoothly with viewport instead of
+     jumping at fixed breakpoints, so it stays readable from phone to
+     ultra-wide without needing separate sm:/lg: overrides everywhere. */
+  .text-hero {
+    font-size: clamp(2rem, 1.55rem + 2.2vw, 3.25rem);
+    line-height: 1.12;
+  }
+  .text-page-title {
+    font-size: clamp(1.75rem, 1.45rem + 1.4vw, 2.5rem);
+    line-height: 1.15;
+  }
+  .text-lede {
+    font-size: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+    line-height: 1.6;
+  }
+  .text-nav-tab {
+    font-size: clamp(0.85rem, 0.8rem + 0.15vw, 0.95rem);
+  }
+  .text-sidebar-item {
+    font-size: clamp(0.875rem, 0.84rem + 0.1vw, 0.95rem);
+  }
+  .text-sidebar-label {
+    font-size: clamp(0.9375rem, 0.87rem + 0.2vw, 1.0625rem);
+  }
+
   .prose-brief {
-    @apply max-w-prose text-[17px] leading-[1.75] text-ink-soft;
+    @apply max-w-prose text-ink-soft;
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
+    line-height: 1.75;
   }
   .prose-brief h2 {
     @apply font-display text-2xl text-ink mt-10 mb-4;

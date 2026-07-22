@@ -40,9 +40,9 @@ export default function BriefingPage({
             <span className="mx-2">/</span>
             {page.section || 'Briefing'}
           </p>
-          <h1 className="font-display text-4xl text-ink mb-4">{page.title}</h1>
+          <h1 className="font-display text-page-title text-ink mb-4">{page.title}</h1>
           {page.summary && (
-            <p className="text-lg text-ink-soft leading-relaxed max-w-prose mb-10">
+            <p className="text-lede text-ink-soft max-w-prose mb-10">
               {page.summary}
             </p>
           )}

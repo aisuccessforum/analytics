@@ -10,10 +10,10 @@ export default function HomePage() {
         <p className="font-mono text-xs uppercase tracking-widest text-brass mb-4">
           Executive knowledge base
         </p>
-        <h1 className="font-display text-4xl sm:text-5xl text-ink leading-[1.15] mb-5">
+        <h1 className="font-display text-hero text-ink mb-5">
           Industry literacy, briefed for leadership.
         </h1>
-        <p className="text-lg text-ink-soft leading-relaxed">
+        <p className="text-lede text-ink-soft">
           Definitions, KPIs, key players, and technology landscapes across the industries you
           operate in and adjacent to — written for the boardroom, not the classroom.
         </p>

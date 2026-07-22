@@ -20,10 +20,12 @@ export default function TopNav({ domains }: { domains: Domain[] }) {
         </div>
       </div>
 
-      {/* Tab bar — active domain gets a solid fill, same interaction pattern as w3schools' language tabs */}
+      {/* Tab bar — active domain gets a solid brass fill against the brand's own
+          deep petrol, so this reads as "your" navigation rather than a generic
+          dark UI bar. Same highlight-on-active interaction as before. */}
       <nav
         aria-label="Domains"
-        className="bg-ink border-y border-ink"
+        className="bg-petrol-dark"
       >
         <div className="max-w-6xl mx-auto px-6 flex items-stretch overflow-x-auto no-scrollbar">
           {domains.map((d) => {
@@ -33,10 +35,10 @@ export default function TopNav({ domains }: { domains: Domain[] }) {
                 key={d.slug}
                 href={`/${d.slug}/`}
                 aria-current={isActive ? 'page' : undefined}
-                className={`shrink-0 px-4 h-11 flex items-center text-sm font-medium tracking-wide transition-colors border-b-2 ${
+                className={`shrink-0 px-4 h-11 flex items-center text-nav-tab font-medium tracking-wide transition-colors border-b-2 ${
                   isActive
-                    ? 'bg-petrol text-white border-brass'
-                    : 'text-paper/60 border-transparent hover:text-paper hover:bg-white/5'
+                    ? 'bg-brass text-ink border-brass'
+                    : 'text-paper/70 border-transparent hover:text-paper hover:bg-white/5'
                 }`}
               >
                 {d.name}

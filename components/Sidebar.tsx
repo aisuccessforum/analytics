@@ -18,7 +18,7 @@ export default function Sidebar({
   }
 
   return (
-    <nav aria-label={`${domain.name} briefings`} className="text-sm">
+    <nav aria-label={`${domain.name} briefings`} className="text-sidebar-item">
       <div className="mb-4 pb-4 border-b border-border">
         <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft/70">
           {domain.name} &middot; {pages.length} briefings indexed

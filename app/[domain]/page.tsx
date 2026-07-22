@@ -22,8 +22,8 @@ export default function DomainPage({ params }: { params: { domain: string } }) {
 
         <div>
           <p className="font-mono text-xs text-brass tracking-widest mb-3">{domain.icon}</p>
-          <h1 className="font-display text-4xl text-ink mb-4">{domain.name}</h1>
-          <p className="text-lg text-ink-soft leading-relaxed max-w-prose mb-10">
+          <h1 className="font-display text-page-title text-ink mb-4">{domain.name}</h1>
+          <p className="text-lede text-ink-soft max-w-prose mb-10">
             {domain.description}
           </p>
 
