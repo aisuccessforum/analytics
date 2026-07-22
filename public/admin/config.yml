@@ -3,7 +3,7 @@ backend:
   repo: aisuccessforum/analytics-hub
   branch: main
   base_url: https://api.aisuccessforum.online
-  auth_endpoint: auth
+  auth_endpoint: callback
 
 # Reuses the same GitHub OAuth app / Cloudflare Pages Function backend
 # already wired up for the AI Success Forum Decap CMS install.
