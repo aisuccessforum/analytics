@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Fraunces, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 import TopNav from '@/components/TopNav';
+import { getAllDomains } from '@/lib/content';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -32,10 +33,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const domains = getAllDomains();
+
   return (
     <html lang="en" className={`${fraunces.variable} ${plexSans.variable} ${plexMono.variable}`}>
       <body>
-        <TopNav />
+        <TopNav domains={domains} />
         {children}
       </body>
     </html>
