@@ -1,0 +1,54 @@
+backend:
+  name: github
+  repo: aisuccessforum/analytics-hub
+  branch: main
+  base_url: https://api.aisuccessforum.online
+  auth_endpoint: auth
+
+# Reuses the same GitHub OAuth app / Cloudflare Pages Function backend
+# already wired up for the AI Success Forum Decap CMS install.
+# Just point base_url at that existing OAuth worker and add this repo
+# to the GitHub App's repository access list.
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "domains"
+    label: "Domains"
+    folder: "content/domains"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    fields:
+      - { label: "Domain Name", name: "name", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "lowercase, no spaces, e.g. telecom" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Index Number", name: "icon", widget: "string", hint: "e.g. 01, 02 — shown as the domain's identifier" }
+      - { label: "Display Order", name: "order", widget: "number", default: 99 }
+
+  - name: "pages"
+    label: "Briefings"
+    folder: "content/pages"
+    path: "{{fields.domain}}/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "lowercase, no spaces, e.g. kpis" }
+      - label: "Domain"
+        name: "domain"
+        widget: "select"
+        options:
+          - { label: "Telecom", value: "telecom" }
+          - { label: "HR", value: "hr" }
+        hint: "Add new options here when a new domain is added to the Domains collection"
+      - label: "Sidebar Section"
+        name: "section"
+        widget: "string"
+        required: false
+        hint: "Optional grouping label shown in the sidebar, e.g. 'Fundamentals' or 'Strategy'. Leave blank for a flat list."
+      - { label: "Sidebar Order", name: "order", widget: "number", default: 99 }
+      - { label: "One-line Summary", name: "summary", widget: "text", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }

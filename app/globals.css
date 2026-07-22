@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+  ::selection {
+    @apply bg-brass/30 text-ink;
+  }
+  :focus-visible {
+    outline: 2px solid #0B5D52;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .prose-brief {
+    @apply max-w-prose text-[17px] leading-[1.75] text-ink-soft;
+  }
+  .prose-brief h2 {
+    @apply font-display text-2xl text-ink mt-10 mb-4;
+  }
+  .prose-brief h3 {
+    @apply font-display text-xl text-ink mt-8 mb-3;
+  }
+  .prose-brief p {
+    @apply mb-5;
+  }
+  .prose-brief ul {
+    @apply list-disc pl-5 mb-5 space-y-1.5;
+  }
+  .prose-brief ol {
+    @apply list-decimal pl-5 mb-5 space-y-1.5;
+  }
+  .prose-brief strong {
+    @apply text-ink font-semibold;
+  }
+  .prose-brief table {
+    @apply w-full text-sm border-collapse mb-6;
+  }
+  .prose-brief th {
+    @apply text-left font-mono text-xs uppercase tracking-wide text-ink-soft border-b border-border pb-2 pr-4;
+  }
+  .prose-brief td {
+    @apply border-b border-border/60 py-2 pr-4 align-top;
+  }
+  .prose-brief blockquote {
+    @apply border-l-2 border-brass pl-4 italic text-ink-soft my-6;
+  }
+  .prose-brief code {
+    @apply font-mono text-[15px] bg-ink/5 px-1.5 py-0.5 rounded;
+  }
+}
