@@ -2,7 +2,7 @@ backend:
   name: github
   repo: aisuccessforum/analytics
   branch: main
-  base_url: https://analytics.aisuccessforum.online
+  base_url: https://aisuccessforum.online
   auth_endpoint: callback
 
 # Reuses the same GitHub OAuth app / Cloudflare Pages Function backend
