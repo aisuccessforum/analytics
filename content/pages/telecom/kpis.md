@@ -21,7 +21,7 @@ summary: The handful of metrics that actually move a telecom operator's valuatio
 
 ## Reading these together, not in isolation
 
-A rising ARPU alongside rising churn usually means an operator is pushing price increases that customers are starting to resist. A falling CAPEX-to-revenue ratio after several years of heavy 5G spend is normal and expected — it signals the build-out phase ending and free cash flow beginning to recover.
+A rising ARPU alongside rising churn usually means an operator is pushing price increases that customers are starting to resist. A falling CAPEX-to-revenue ratio after several years of heavy 5G spend is normal and expected, since it signals the build-out phase ending and free cash flow beginning to recover.
 
 ## Metrics unique to specific segments
 
@@ -29,4 +29,4 @@ A rising ARPU alongside rising churn usually means an operator is pushing price 
 
 **IoT/M2M:** Connected devices per subscriber account, average revenue per connection (much lower than consumer ARPU, but at far higher volume).
 
-**Tower/infrastructure:** Tenancy ratio — the number of operators sharing a single tower. Higher tenancy ratios mean better returns on infrastructure investment.
+**Tower/infrastructure:** Tenancy ratio, the number of operators sharing a single tower. Higher tenancy ratios mean better returns on infrastructure investment.
